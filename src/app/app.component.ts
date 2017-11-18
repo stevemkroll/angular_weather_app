@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { api_key } from '../../api_key';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import 'rxjs/add/operator/map';
 
 export class AppComponent {
   private locationURL = 'http://ip-api.com/json';
-  private weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=42.003922&lon=-87.970352&APPID=27f86134d16c4da4e55027aaad855566';
+  private weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=42.003922&lon=-87.970352&APPID=' + api_key;
   location: any = {};
   weather: any = {};
 
@@ -18,7 +19,7 @@ export class AppComponent {
 
     // this.getLocation();
     // this.getWeather();
-    // this.getObjects();
+    this.getObjects();
 
   }
 
