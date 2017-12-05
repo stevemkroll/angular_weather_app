@@ -11,7 +11,7 @@ Once you have your API key:
 
 - Create a new typescript file in the root folder called ```api_key.ts```
 - In that new file add:
-  - ```export let api_key = { *your API key* };```
+  - ```export let api_key = { your API key };```
 
 ## Run The Project
 
