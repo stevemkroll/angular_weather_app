@@ -14,11 +14,13 @@ export class CityComponent implements OnInit {
 	location: any = {};
 
 	city:String;
-  latitude:Number;
-  longitude:Number;
+  lat:Number;
+  lon:Number;
 
   constructor(private http: Http) { 
-  	this.getLocationObject(latitude,longitude);
+    this.getCoordinates();
+    this.setCoordinates(latitude, longitude);
+  	this.getLocationObject();
   }
 
   getLocation() {
@@ -26,19 +28,33 @@ export class CityComponent implements OnInit {
     .map((res: Response) => res.json() );
   }
 
-  getLocationObject(latitude, longitude) {
-    console.log('City - BEFORE', latitude);
+  getLocationObject() {
     this.getLocation().subscribe(location => {
       this.city = location.city.toUpperCase();
-      this.latitude = location.lat;
-      this.longitude = location.lon;
-      latitude = this.latitude
     });
-    console.log('City - AFTER', latitude);
+  }
+
+  getCoordinates() {
+    this.getLocation().subscribe(location => {
+      this.lat = location.lat;
+      this.lon = location.lon
+      // debugger;
+      // console.log(this.lat);
+      // console.log(this.lon);
+    });
+  }
+
+  setCoordinates(latitude, longitude) {
+    // latitude = '5';
+    // longitude = '10';
+    console.log('latitude', latitude);
+    console.log('longitude', longitude);
+    // console.log('this.lat', this.lat);
+    // console.log('this.lon', this.lon);
   }
 
   ngOnInit() {
-    
+
   }
 
 }

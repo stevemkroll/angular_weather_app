@@ -22,7 +22,8 @@ export class DegreesComponent implements OnInit {
   }
 
   getWeather() {
-  	console.log('Degrees - INIT', latitude);
+  	console.log('latitude', latitude);
+    console.log('longitude', longitude);
   	console.log(this.weatherURL);
     return this.http.get(this.weatherURL)
     .map((res: Response) => res.json());
