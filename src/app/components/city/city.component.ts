@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { latitude, longitude } from '../../../../coordinates';
 import 'rxjs/add/operator/map';
 import $ from 'jquery';
 
@@ -9,15 +10,15 @@ import $ from 'jquery';
   styleUrls: ['./city.component.css']
 })
 export class CityComponent implements OnInit {
-	 private locationURL = 'http://ip-api.com/json';
-	 location: any = {};
+	private locationURL = 'http://ip-api.com/json';
+	location: any = {};
 
 	city:String;
   latitude:Number;
   longitude:Number;
 
   constructor(private http: Http) { 
-  	this.getLocationObject();
+  	this.getLocationObject(latitude,longitude);
   }
 
   getLocation() {
@@ -25,17 +26,15 @@ export class CityComponent implements OnInit {
     .map((res: Response) => res.json() );
   }
 
-  getLocationObject() {
+  getLocationObject(latitude, longitude) {
+    console.log('City - BEFORE', latitude);
     this.getLocation().subscribe(location => {
-      console.log('location', location);
       this.city = location.city.toUpperCase();
       this.latitude = location.lat;
       this.longitude = location.lon;
-      $('#city_text').attr({
-        'latitude': this.latitude,
-        'longitude': this.longitude
-      });
+      latitude = this.latitude
     });
+    console.log('City - AFTER', latitude);
   }
 
   ngOnInit() {

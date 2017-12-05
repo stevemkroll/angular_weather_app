@@ -1,0 +1,22 @@
+#degrees {
+  position: absolute;
+  top: -90px;
+  left: 0px;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#degrees p {
+  font-size: 120px;
+  font-weight: 100;
+  color: #EEE;
+  /*text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);*/
+}
+
+#degrees_symbol {
+  font-size: 80px;
+  font-weight: 100;
+  color: #EEE;
+  position: relative;
+  top: -30px;
+}

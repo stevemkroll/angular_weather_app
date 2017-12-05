@@ -8,6 +8,7 @@ import { CircleComponent } from './components/circle/circle.component';
 import { DateComponent } from './components/date/date.component';
 import { TimeComponent } from './components/time/time.component';
 import { CityComponent } from './components/city/city.component';
+import { DegreesComponent } from './components/weather/degrees/degrees.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CityComponent } from './components/city/city.component';
     DateComponent,
     TimeComponent,
     CityComponent,
+    DegreesComponent,
   ],
   imports: [
     BrowserModule,

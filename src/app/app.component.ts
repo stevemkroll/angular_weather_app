@@ -35,10 +35,10 @@ export class AppComponent {
 
   getObjects() {
     this.getLocation().subscribe(location => {
-      console.log('location', location);
+      // console.log('location', location);
     });
     this.getWeather().subscribe(weather => {
-      console.log('weather', weather);
+      // console.log('weather', weather);
     });
   }
 
