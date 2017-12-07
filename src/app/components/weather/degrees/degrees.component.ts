@@ -17,14 +17,14 @@ export class DegreesComponent implements OnInit {
 	weather: any = {};
 	degrees:Number;
 
-  constructor(private http: Http) { 
-  		this.getWeatherObject();
+  constructor(private http: Http) {
+  	this.getWeatherObject();
   }
 
   getWeather() {
-  	console.log('latitude', latitude);
-    console.log('longitude', longitude);
-  	console.log(this.weatherURL);
+  	// console.log('latitude', latitude);
+   //  console.log('longitude', longitude);
+  	// console.log(this.weatherURL);
     return this.http.get(this.weatherURL)
     .map((res: Response) => res.json());
   }
@@ -37,7 +37,11 @@ export class DegreesComponent implements OnInit {
   }
 
   ngOnInit() {
-  	
+    let lat = $('#city_text').getAttribute('latitude');
+    // console.log();
+  	// debugger;
+    // let lat = $('#city_text').attr('latitude');
+    console.log(lat);
   }
 
 }

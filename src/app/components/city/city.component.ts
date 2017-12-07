@@ -14,8 +14,9 @@ export class CityComponent implements OnInit {
 	location: any = {};
 
 	city:String;
-  lat:Number;
-  lon:Number;
+
+  latitude = 0;
+  longitude = 0;
 
   constructor(private http: Http) { 
     this.getCoordinates();
@@ -35,10 +36,8 @@ export class CityComponent implements OnInit {
 
   getCoordinates() {
     this.getLocation().subscribe(location => {
-      this.lat = location.lat;
-      this.lon = location.lon;
-      $('#city_text').attr('latitide', this.lat);
-      $('#city_text').attr('longitude', this.lon);
+      this.latitude = location.lat;
+      this.longitude = location.lon;
     });
   }
 
