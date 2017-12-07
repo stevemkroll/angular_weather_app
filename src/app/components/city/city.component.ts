@@ -19,7 +19,6 @@ export class CityComponent implements OnInit {
 
   constructor(private http: Http) { 
     this.getCoordinates();
-    this.setCoordinates(latitude, longitude);
   	this.getLocationObject();
   }
 
@@ -37,20 +36,10 @@ export class CityComponent implements OnInit {
   getCoordinates() {
     this.getLocation().subscribe(location => {
       this.lat = location.lat;
-      this.lon = location.lon
-      // debugger;
-      // console.log(this.lat);
-      // console.log(this.lon);
+      this.lon = location.lon;
+      $('#city_text').attr('latitide', this.lat);
+      $('#city_text').attr('longitude', this.lon);
     });
-  }
-
-  setCoordinates(latitude, longitude) {
-    // latitude = '5';
-    // longitude = '10';
-    console.log('latitude', latitude);
-    console.log('longitude', longitude);
-    // console.log('this.lat', this.lat);
-    // console.log('this.lon', this.lon);
   }
 
   ngOnInit() {
