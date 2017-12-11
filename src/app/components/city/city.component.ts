@@ -10,7 +10,7 @@ import $ from 'jquery';
 
 export class CityComponent implements OnInit {
 	
-  location: Location[];
+  location: Location;
 
   constructor(private data: DataService) { 
     console.log('Constructor ran...');
@@ -19,7 +19,7 @@ export class CityComponent implements OnInit {
   ngOnInit() {
 
     this.data.getLocation().subscribe((location) => {
-     console.log("LOCATION :", location);
+     // console.log("LOCATION :", location);
      this.location = location;
    })
    
@@ -29,6 +29,4 @@ export class CityComponent implements OnInit {
 
 interface Location{
   city:string,
-  lat:number,
-  lon:number
 }
