@@ -15,12 +15,15 @@ export class AppComponent {
   location: any = {};
   weather: any = {};
 
+  test:String;
+
   constructor(private http: Http) {
 
     // this.getLocation();
     // this.getWeather();
     this.getObjects();
-
+    this.test = 'HELLO WORLD';
+    // console.log('APP COMPONENT -', this.test);
   }
 
   getLocation() {
