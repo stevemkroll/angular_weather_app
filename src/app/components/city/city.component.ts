@@ -17,12 +17,9 @@ export class CityComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.data.getLocation().subscribe((location) => {
-     // console.log("LOCATION :", location);
      this.location = location;
    })
-   
   }
 
 }
