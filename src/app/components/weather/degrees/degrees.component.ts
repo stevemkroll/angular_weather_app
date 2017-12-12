@@ -18,7 +18,7 @@ export class DegreesComponent implements OnInit {
   ngOnInit() {
     this.data.getWeather().subscribe((weather) => {
       this.weather = weather;
-      console.log(this.weather);
+      // console.log(this.weather);
     });
   }
 

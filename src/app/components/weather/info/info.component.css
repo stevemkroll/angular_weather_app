@@ -1,0 +1,66 @@
+#info {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+#humidity {
+  position: absolute;
+  top: 60px;
+  left: -80px;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#humidity p {
+  font-size: 18px;
+  font-weight: 100;
+  color: #EEE;
+}
+
+#pressure {
+  position: absolute;
+  top: 80px;
+  left: -40px;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#pressure p {
+  font-size: 18px;
+  font-weight: 100;
+  color: #EEE;
+}
+
+#temp_high {
+  position: absolute;
+  top: 100px;
+  left: -30px;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#temp_high p {
+  font-size: 18px;
+  font-weight: 100;
+  color: #EEE;
+}
+
+#temp_low {
+  position: absolute;
+  top: 120px;
+  left: -10px;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#temp_low p {
+  font-size: 18px;
+  font-weight: 100;
+  color: #EEE;
+}
+
+#degrees_symbol {
+  font-weight: 100;
+  color: #EEE;
+}

@@ -11,6 +11,7 @@ import { DateComponent } from './components/date/date.component';
 import { TimeComponent } from './components/time/time.component';
 import { CityComponent } from './components/city/city.component';
 import { DegreesComponent } from './components/weather/degrees/degrees.component';
+import { InfoComponent } from './components/weather/info/info.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DegreesComponent } from './components/weather/degrees/degrees.component
     TimeComponent,
     CityComponent,
     DegreesComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
